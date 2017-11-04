@@ -14,8 +14,8 @@ class Activity1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_1)
-        imageView = findViewById(R.id.imageView) as ImageView
-        progressBar = findViewById(R.id.progressBar) as ProgressBar
+        imageView = findViewById<ImageView>(R.id.imageView)
+        progressBar = findViewById<ProgressBar>(R.id.progressBar)
         val handler = Handler()
         handler.postDelayed({
             imageView!!.visibility = View.VISIBLE
