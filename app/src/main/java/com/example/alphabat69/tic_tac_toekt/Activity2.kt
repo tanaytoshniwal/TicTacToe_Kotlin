@@ -33,15 +33,15 @@ class Activity2 : AppCompatActivity(), View.OnClickListener {
         seven = findViewById<ImageButton>(R.id.seven)
         eight = findViewById<ImageButton>(R.id.eight)
 
-        zero.setOnClickListener(this)
-        one.setOnClickListener(this)
-        two.setOnClickListener(this)
-        three.setOnClickListener(this)
-        four.setOnClickListener(this)
-        five.setOnClickListener(this)
-        six.setOnClickListener(this)
-        seven.setOnClickListener(this)
-        eight.setOnClickListener(this)
+        zero?.setOnClickListener(this)
+        one?.setOnClickListener(this)
+        two?.setOnClickListener(this)
+        three?.setOnClickListener(this)
+        four?.setOnClickListener(this)
+        five?.setOnClickListener(this)
+        six?.setOnClickListener(this)
+        seven?.setOnClickListener(this)
+        eight?.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -52,93 +52,93 @@ class Activity2 : AppCompatActivity(), View.OnClickListener {
             R.id.zero -> {
                 if (b) {
                     //zero.setBackgroundColor(Color.BLUE);
-                    zero.setBackgroundResource(R.drawable.o)
+                    zero?.setBackgroundResource(R.drawable.o)
                     layout[0]++
                 } else {
-                    zero.setBackgroundResource(R.drawable.x)
+                    zero?.setBackgroundResource(R.drawable.x)
                     layout[0] += 2
                 }
-                zero.isClickable = false
+                zero?.isClickable = false
             }
             R.id.one -> {
                 if (b) {
-                    one.setBackgroundResource(R.drawable.o)
+                    one?.setBackgroundResource(R.drawable.o)
                     layout[1]++
                 } else {
-                    one.setBackgroundResource(R.drawable.x)
+                    one?.setBackgroundResource(R.drawable.x)
                     layout[1] += 2
                 }
-                one.isClickable = false
+                one?.isClickable = false
             }
             R.id.two -> {
                 if (b) {
-                    two.setBackgroundResource(R.drawable.o)
+                    two?.setBackgroundResource(R.drawable.o)
                     layout[2]++
                 } else {
-                    two.setBackgroundResource(R.drawable.x)
+                    two?.setBackgroundResource(R.drawable.x)
                     layout[2] += 2
                 }
-                two.isClickable = false
+                two?.isClickable = false
             }
             R.id.three -> {
                 if (b) {
-                    three.setBackgroundResource(R.drawable.o)
+                    three?.setBackgroundResource(R.drawable.o)
                     layout[3]++
                 } else {
-                    three.setBackgroundResource(R.drawable.x)
+                    three?.setBackgroundResource(R.drawable.x)
                     layout[3] += 2
                 }
-                three.isClickable = false
+                three?.isClickable = false
             }
             R.id.four -> {
                 if (b) {
-                    four.setBackgroundResource(R.drawable.o)
+                    four?.setBackgroundResource(R.drawable.o)
                     layout[4]++
                 } else {
-                    four.setBackgroundResource(R.drawable.x)
+                    four?.setBackgroundResource(R.drawable.x)
                     layout[4] += 2
                 }
-                four.isClickable = false
+                four?.isClickable = false
             }
             R.id.five -> {
                 if (b) {
-                    five.setBackgroundResource(R.drawable.o)
+                    five?.setBackgroundResource(R.drawable.o)
                     layout[5]++
                 } else {
-                    five.setBackgroundResource(R.drawable.x)
+                    five?.setBackgroundResource(R.drawable.x)
                     layout[5] += 2
                 }
-                five.isClickable = false
+                five?.isClickable = false
             }
             R.id.six -> {
                 if (b) {
-                    six.setBackgroundResource(R.drawable.o)
+                    six?.setBackgroundResource(R.drawable.o)
                     layout[6]++
                 } else {
-                    six.setBackgroundResource(R.drawable.x)
+                    six?.setBackgroundResource(R.drawable.x)
                     layout[6] += 2
                 }
-                six.isClickable = false
+                six?.isClickable = false
             }
             R.id.seven -> {
                 if (b) {
-                    seven.setBackgroundResource(R.drawable.o)
+                    seven?.setBackgroundResource(R.drawable.o)
                     layout[7]++
                 } else {
-                    seven.setBackgroundResource(R.drawable.x)
+                    seven?.setBackgroundResource(R.drawable.x)
                     layout[7] += 2
                 }
-                seven.isClickable = false
+                seven?.isClickable = false
             }
             R.id.eight -> {
                 if (b) {
-                    eight.setBackgroundResource(R.drawable.o)
+                    eight?.setBackgroundResource(R.drawable.o)
                     layout[8]++
                 } else {
-                    eight.setBackgroundResource(R.drawable.x)
+                    eight?.setBackgroundResource(R.drawable.x)
                     layout[8] += 2
                 }
-                eight.isClickable = false
+                eight?.isClickable = false
             }
         }
         chance--
@@ -152,9 +152,9 @@ class Activity2 : AppCompatActivity(), View.OnClickListener {
         else
             str = "Player Two(Cross) Wins!"
         val builder: AlertDialog.Builder
-        builder = AlertDialog.Builder(this@Activity1).setTitle("Congratulations!").setMessage(str)
+        builder = AlertDialog.Builder(this@Activity2).setTitle("Congratulations!").setMessage(str)
                 .setPositiveButton("OK") { dialog, which ->
-                    startActivity(Intent(this@Activity1, Activity1::class.java))
+                    startActivity(Intent(this@Activity2, Activity2::class.java))
                     finish()
                 }
         val dialog = builder.create()
@@ -165,9 +165,9 @@ class Activity2 : AppCompatActivity(), View.OnClickListener {
 
     fun tie() {
         val builder: AlertDialog.Builder
-        builder = AlertDialog.Builder(this@Activity1).setTitle("Oh bhai bhai bhai bhai!").setMessage("It's a tie!")
+        builder = AlertDialog.Builder(this@Activity2).setTitle("Oh bhai bhai bhai bhai!").setMessage("It's a tie!")
                 .setPositiveButton("OK") { dialog, which ->
-                    startActivity(Intent(this@Activity1, Activity1::class.java))
+                    startActivity(Intent(this@Activity2, Activity2::class.java))
                     finish()
                 }
         val dialog = builder.create()
