@@ -22,7 +22,7 @@ class Activity1 : AppCompatActivity() {
             handler.postDelayed({
                 progressBar!!.visibility = View.VISIBLE
                 handler.postDelayed({
-                    startActivity(Intent(this@Activity1, Activity2::class.java))
+                    startActivity(Intent(this, Activity2::class.java))
                     finish()
                 }, 500)
             }, 500)

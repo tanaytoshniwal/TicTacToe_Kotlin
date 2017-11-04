@@ -9,20 +9,20 @@ import android.view.View
 import android.widget.ImageButton
 
 class Activity2 : AppCompatActivity(), View.OnClickListener {
-    internal var zero: ImageButton? = null
-    internal var one: ImageButton? = null
-    internal var two: ImageButton? = null
-    internal var three: ImageButton? = null
-    internal var four: ImageButton? = null
-    internal var five: ImageButton? = null
-    internal var six: ImageButton? = null
-    internal var seven: ImageButton? = null
-    internal var eight: ImageButton? = null
-    internal var layout = intArrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0)
-    internal var chance = 9
+    private var zero: ImageButton? = null
+    private var one: ImageButton? = null
+    private var two: ImageButton? = null
+    private var three: ImageButton? = null
+    private var four: ImageButton? = null
+    private var five: ImageButton? = null
+    private var six: ImageButton? = null
+    private var seven: ImageButton? = null
+    private var eight: ImageButton? = null
+    private var layout = intArrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0)
+    private var chance = 9
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_1)
+        setContentView(R.layout.activity_2)
         zero = findViewById<ImageButton>(R.id.zero)
         one = findViewById<ImageButton>(R.id.one)
         two = findViewById<ImageButton>(R.id.two)
